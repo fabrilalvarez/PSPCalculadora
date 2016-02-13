@@ -301,27 +301,30 @@ public class Ventana extends javax.swing.JFrame {
             System.out.println("Enviando mensaje");
             os.write(mensaje.getBytes());
             System.out.println("Dato enviado");
+            byte[] msj = new byte[25];
+            is.read(msj);
+            jTOperacion.setText(new String(msj));
         } catch (IOException ex) {
         }
     }//GEN-LAST:event_jButtonCalcularActionPerformed
 
     private void jButtonSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSumarActionPerformed
-        mensaje = mensaje + " 1 ";
+        mensaje = mensaje + " + ";
         jTOperacion.setText(mensaje);
     }//GEN-LAST:event_jButtonSumarActionPerformed
 
     private void jButtonRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRestarActionPerformed
-        mensaje = mensaje + " 2 ";
+        mensaje = mensaje + " - ";
         jTOperacion.setText(mensaje);
     }//GEN-LAST:event_jButtonRestarActionPerformed
 
     private void jButtonMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMultiplicarActionPerformed
-        mensaje = mensaje + " 3 ";
+        mensaje = mensaje + " * ";
         jTOperacion.setText(mensaje);
     }//GEN-LAST:event_jButtonMultiplicarActionPerformed
 
     private void jButtonDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDividirActionPerformed
-        mensaje = mensaje + " 4 ";
+        mensaje = mensaje + " / ";
         jTOperacion.setText(mensaje);
     }//GEN-LAST:event_jButtonDividirActionPerformed
 
